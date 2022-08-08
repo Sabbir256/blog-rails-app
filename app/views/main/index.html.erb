@@ -1,0 +1,13 @@
+<%= render partial:"shared/flash"%>
+<h1 class="d-flex justify-content-center mt-4">Welcome to MyBlog</h1>
+
+<% @blogs.each do |blog| %>
+    <div class="mb-4">
+        <div class="mt-2 display-6">
+            <%= blog.title%>
+        </div>
+        <div class="mt-2" style="color:gray;">
+            <%= blog.body %>
+        </div>
+    </div>
+<%end%>

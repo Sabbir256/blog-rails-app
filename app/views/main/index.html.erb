@@ -1,13 +1,14 @@
 <%= render partial:"shared/flash"%>
-<h1 class="d-flex justify-content-center mt-4">Welcome to MyBlog</h1>
+<h1 class="d-flex justify-content-center mt-4">Sabbir's Blog</h1>
 
-<% @blogs.each do |blog| %>
-    <div class="mb-4">
-        <div class="mt-2 display-6">
-            <%= blog.title%>
+<div class="d-flex justify-content-evenly mt-5">
+    <% @blogs.each do |blog| %>
+        <div class="card" style="width: 18rem;">
+            <%= image_tag("demo-mg.jpg", class:"card-img-top") %>
+            <div class="card-body">
+                <h5 class="card-title"><%= blog.title%></h5>
+                <p class="card-text"><%= blog.body %></p>
+            </div>
         </div>
-        <div class="mt-2" style="color:gray;">
-            <%= blog.body %>
-        </div>
-    </div>
-<%end%>
+    <%end%>
+</div>
